@@ -31,13 +31,13 @@ namespace sqliteTest1 {
             DapperExtensions.DapperExtensions.SqlDialect = new DapperExtensions.Sql.SqliteDialect();
 
             Mono.Data.Sqlite.SqliteConnection connection = new Mono.Data.Sqlite.SqliteConnection();            connection.ConnectionString = @"Data Source=パス　/test.sqlite";            connection.Open();            testTable testTable1 = new testTable();
-            testTable1.name = "aaaaaa111";            connection.Insert<testTable>(testTable1);            var qurey = "select * from testTable;";            var result = connection.QueryFirst<testTable>(qurey);            result.name += "qqqq111";            connection.Update<testTable>(result);            connection.Close();        }        static public void _dapperTest() {            Mono.Data.Sqlite.SqliteConnection connection = new Mono.Data.Sqlite.SqliteConnection();             connection.ConnectionString = @"Data Source=パス　/sqliteTest/test.sqlite";            connection.Open();            var qurey = "select * from testTable;";            var result = connection.Query<testTable>(qurey);            foreach(var p in result) {                Console.WriteLine("ID:" + p.test_id + " 名称:" + p.name);            }
+            testTable1.name = "aaaaaa111";            connection.Insert<testTable>(testTable1);            var qurey = "select * from testTable;";            var result = connection.QueryFirst<testTable>(qurey);            result.name += "qqqq111";            connection.Update<testTable>(result);            connection.Close();        }        static public void _dapperTest() {            Mono.Data.Sqlite.SqliteConnection connection = new Mono.Data.Sqlite.SqliteConnection();             connection.ConnectionString = @"Data Source=パス　/test.sqlite";            connection.Open();            var qurey = "select * from testTable;";            var result = connection.Query<testTable>(qurey);            foreach(var p in result) {                Console.WriteLine("ID:" + p.test_id + " 名称:" + p.name);            }
 
             connection.Close();        }        static public void _sqliteTest() {            Mono.Data.Sqlite.SqliteConnection connection = new Mono.Data.Sqlite.SqliteConnection();            Mono.Data.Sqlite.SqliteCommand command = new Mono.Data.Sqlite.SqliteCommand();
 
 
             // 接続します。
-            connection.ConnectionString = @"Data Source=パス　/test.sqlite";            connection.Open();
+            connection.ConnectionString = @"Data Source=パス　/sqliteTest1/test.sqlite";            connection.Open();
 
             // SELECT文を設定します。
             command.CommandText = "select * from testTable;";            command.Connection = connection;
