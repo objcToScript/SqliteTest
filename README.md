@@ -14,12 +14,6 @@ DapperExtensions
 
 Mono.Data.Sqlie
 
-Sqliteファイルのパスを設定してください
-
-connection = new Mono.Data.Sqlite.SqliteConnection();
-
-connection.ConnectionString = @"Data Source=パス/songData.sqlite";
-
 
 #### Macでは動いたがLinuxでうごかなった場合の対処のしかた
 
