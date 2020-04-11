@@ -2,6 +2,10 @@
 
 #### インストール
 
+[GTKSharp](https://www.mono-project.com/download/stable/#download-lin)をインストールする
+
+[MonoDevelop](https://www.monodevelop.com/download/#fndtn-download-lin-raspbian)をインストールする
+
 Nugetからダウンロードするパッケージ
 
 Dapper
