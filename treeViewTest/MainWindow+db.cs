@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Data;
 using System.Collections;
 using GLib;
@@ -15,13 +15,18 @@ public partial class MainWindow  {
 
 	void _mkDb() {
 
-        DapperExtensions.DapperExtensions.SqlDialect = new DapperExtensions.Sql.SqliteDialect();
+		try {
+			DapperExtensions.DapperExtensions.SqlDialect = new DapperExtensions.Sql.SqliteDialect();
 
-		connection = new Mono.Data.Sqlite.SqliteConnection();
+			connection = new Mono.Data.Sqlite.SqliteConnection();
 
-		connection.ConnectionString = @"Data Source=パス/songData.sqlite";
+			connection.ConnectionString = @"Data Source=./songData.sqlite";
 
-        connection.Open();
+			connection.Open();
+
+		} catch (Exception en) {
+			Console.WriteLine(en.Message);
+		}
 
     }
 
