@@ -25,4 +25,4 @@ $ monodevelop
 
 IDEが立ち上がる。VisualStudio形式のSINファイルを読み込む
 
-ビルドしてみる
+デバッグする
