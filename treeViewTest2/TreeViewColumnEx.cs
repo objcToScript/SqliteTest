@@ -14,7 +14,6 @@ public static class objectExtensions {
         MethodInfo getMethod = pi.GetGetMethod();
         object result = getMethod.Invoke(obj, null);
 
-
         return result;
     }
 }
@@ -25,7 +24,7 @@ namespace Gtk {
 
 		public String bindingPropertyName = "";
 
-		public CellRendererText _mkCellRendererText(string title = null) {
+		public CellRendererText _mkCellRendererText(string title = "") {
             this.Title = title;
             Gtk.CellRendererText CellRendererText1 = new Gtk.CellRendererText();
             this.PackStart(CellRendererText1, true);
@@ -33,21 +32,21 @@ namespace Gtk {
             return CellRendererText1;
         }
 
-        public CellRendererPixbuf _mkCellRendererPixbuf(string title = null) {
+        public CellRendererPixbuf _mkCellRendererPixbuf(string title = "") {
             this.Title = title;
             Gtk.CellRendererPixbuf CellRendererPixbuf1 = new Gtk.CellRendererPixbuf();
             this.PackStart(CellRendererPixbuf1, true);
             return CellRendererPixbuf1;
         }
 
-        public CellRendererToggle _mkCellRendererToggle(string title = null) {
+        public CellRendererToggle _mkCellRendererToggle(string title = "") {
             this.Title = title;
             Gtk.CellRendererToggle CellRendererToggle1 = new Gtk.CellRendererToggle();
             this.PackStart(CellRendererToggle1, true);
             return CellRendererToggle1;
         }
 
-        public CellRendererProgress _mkCellRendererProgress(string title = null) {
+        public CellRendererProgress _mkCellRendererProgress(string title = "") {
             this.Title = title;
             Gtk.CellRendererProgress CellRendererProgress1 = new Gtk.CellRendererProgress();
             this.PackStart(CellRendererProgress1, true);
@@ -78,9 +77,9 @@ namespace Gtk {
             object value = song._performSelector_Property(columnt1.bindingPropertyName);
 
             if ( cell is Gtk.CellRendererText && (value is String)) {
-                (cell as Gtk.CellRendererText).Text = value as string;
+                (cell as Gtk.CellRendererText).Text = value as String;
             } else if(cell is Gtk.CellRendererText && (value is String)) {
-                (cell as Gtk.CellRendererPixbuf).Pixbuf = new Pixbuf(null, (value as string));
+                (cell as Gtk.CellRendererPixbuf).Pixbuf = new Pixbuf(null, (value as String));
             } else if(cell is Gtk.CellRendererToggle && (value is String)) {
                 (cell as Gtk.CellRendererToggle).Active = Convert.ToBoolean((value is String));
             } else if(cell is Gtk.CellRendererProgress && (value is String)) {
