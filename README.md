@@ -25,11 +25,13 @@ IDEが立ち上がる。VisualStudio形式のSINファイルを読み込む
 
 デバッグする
 
+LinuxのMonoDevelopの設定画面　プロジェクト　ー　ビルド
+**「xbuildの代わりにMSBuildでビルドする」を無効にする**
+
 #### Microsoft.CSharp.Core.targetsファイルがないエラー
 
-“/home/pi/,cache/MonoDevelop/7.0/MSBuild/1068_1/Microsoft.CSharp.Core.targetsが見つかりませんでした。
+“/home/pi/,cache/MonoDevelop/7.0/MSBuild/1068_1/Microsoft.CSharp.Core.targetsが見つかりませんでした。と出た場合は
 
-と出た場合は
 
 ~~ソリューション　ー　参照　ー Microsoft.CSharpを追加や更新~~
 ~~それでもエラーが出る場合は~~
