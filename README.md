@@ -31,10 +31,12 @@ IDEが立ち上がる。VisualStudio形式のSINファイルを読み込む
 
 と出た場合は
 
-ソリューション　ー　参照　ー Microsoft.CSharpを追加や更新
+~~ソリューション　ー　参照　ー Microsoft.CSharpを追加や更新~~
+~~それでもエラーが出る場合は~~
+~~RaspberryPi ー 表示　ー 隠しフォルダを表示する~~
+~~MSBuild / 以下複数フォルダがある場合は両方削除する~~
+~~再度Microsoft.CSharpを追加~~
 
-それでもエラーが出る場合は
+LinuxのMonoDevelopの設定画面　プロジェクト　ー　ビルド
+**「xbuildの代わりにMSBuildでビルドする」を無効にする**
 
-RaspberryPi ー 表示　ー 隠しフォルダを表示する
-MSBuild / 以下複数フォルダがある場合は両方削除する
-再度Microsoft.CSharpを追加
