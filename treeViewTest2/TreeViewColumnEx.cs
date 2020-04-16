@@ -78,12 +78,18 @@ namespace Gtk {
 
             if ( cell is Gtk.CellRendererText && (value is String)) {
                 (cell as Gtk.CellRendererText).Text = value as String;
-            } else if(cell is Gtk.CellRendererText && (value is String)) {
+            } else if(cell is Gtk.CellRendererPixbuf && (value is String)) {
                 (cell as Gtk.CellRendererPixbuf).Pixbuf = new Pixbuf(null, (value as String));
             } else if(cell is Gtk.CellRendererToggle && (value is String)) {
                 (cell as Gtk.CellRendererToggle).Active = Convert.ToBoolean((value is String));
             } else if(cell is Gtk.CellRendererProgress && (value is String)) {
                 (cell as Gtk.CellRendererProgress).Value = Convert.ToInt32((value is String));
+            } else if(cell is Gtk.CellRendererPixbuf && (value is byte[])) {
+                (cell as Gtk.CellRendererPixbuf).Pixbuf = new Pixbuf((byte[])value);
+            } else if(cell is Gtk.CellRendererToggle && (value is Boolean)) {
+                (cell as Gtk.CellRendererToggle).Active = (Boolean)value;
+            } else if(cell is Gtk.CellRendererProgress && (value is int)) {
+                (cell as Gtk.CellRendererProgress).Value = (int)value;
             }
 
         }
