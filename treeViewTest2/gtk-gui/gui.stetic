@@ -8,7 +8,7 @@
     <widget-library name="../bin/Debug/treeViewTest.exe" internal="true" />
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="527 353">
+  <widget class="Gtk.Window" id="MainWindow" design-size="560 424">
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -203,6 +203,43 @@
           <packing>
             <property name="Position">2</property>
             <property name="AutoSize">True</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Fixed" id="fixed12">
+            <property name="MemberName" />
+            <property name="HeightRequest">96</property>
+            <property name="HasWindow">False</property>
+            <child>
+              <widget class="Gtk.Label" id="label3">
+                <property name="MemberName" />
+                <property name="LabelProp" translatable="yes">テスト配置</property>
+              </widget>
+              <packing>
+                <property name="X">38</property>
+                <property name="Y">30</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.Button" id="button3">
+                <property name="MemberName" />
+                <property name="CanFocus">True</property>
+                <property name="Type">TextOnly</property>
+                <property name="Label" translatable="yes">テストボタン</property>
+                <property name="UseUnderline">True</property>
+              </widget>
+              <packing>
+                <property name="X">439</property>
+                <property name="Y">28</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="PackType">End</property>
+            <property name="Position">3</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
           </packing>
         </child>
       </widget>
