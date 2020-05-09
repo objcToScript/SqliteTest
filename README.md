@@ -1,12 +1,17 @@
 ## SqliteTest or TreeViewTest
 
-#### インストール
+###Macで開発する
+
+[VisualStudioMacをインストールする](https://docs.microsoft.com/ja-jp/visualstudio/mac/installation?view=vsmac-2019)
+
+#### Linuxで開発する
+
+[MonoDevelopをインストールする](https://www.monodevelop.com/download/#fndtn-download-lin-raspbian)をインストールする
 
 [GTKSharp](https://www.mono-project.com/download/stable/#download-lin)をインストールする
 
-[MonoDevelop](https://www.monodevelop.com/download/#fndtn-download-lin-raspbian)をインストールする
 
-Nugetからダウンロードするパッケージ
+#### Nugetからダウンロードするパッケージ
 
 Dapper
 
@@ -15,30 +20,24 @@ DapperExtensions
 Mono.Data.Sqlie
 
 
-#### Macでは動いたがLinuxでうごかなった場合の対処のしかた
+#### Macでは動いたがLinuxでうごかなった場合の対処の仕方
 
-Linuxに[MonoDevelop](https://www.monodevelop.com/download/#fndtn-download-lin-raspbian)をインストールする
+VisualStudio形式のSINはMacWinLinuxで互換性あり
+
+MonoDevelopを起動する
 
 $ monodevelop
 
-IDEが立ち上がる。VisualStudio形式のSINファイルを読み込む
+VisualStudioをSinファイルを読み込みデバッグする
 
-デバッグする
+#### LinuxのMonoDevelopの必須設定
 
-LinuxのMonoDevelopの設定画面　プロジェクト　ー　ビルド
-**「xbuildの代わりにMSBuildでビルドする」を無効にする**
-
-#### Microsoft.CSharp.Core.targetsファイルがないエラー
+Microsoft.CSharp.Core.targetsファイルがないエラー
 
 “/home/pi/,cache/MonoDevelop/7.0/MSBuild/1068_1/Microsoft.CSharp.Core.targetsが見つかりませんでした。と出た場合は
 
-
-~~ソリューション　ー　参照　ー Microsoft.CSharpを追加や更新~~
-~~それでもエラーが出る場合は~~
-~~RaspberryPi ー 表示　ー 隠しフォルダを表示する~~
-~~MSBuild / 以下複数フォルダがある場合は両方削除する~~
-~~再度Microsoft.CSharpを追加~~
-
-LinuxのMonoDevelopの設定画面　プロジェクト　ー　ビルド
+#### MonoDevelopの設定画面　プロジェクト　ー　ビルド
 **「xbuildの代わりにMSBuildでビルドする」を無効にする**
+
+無効にすること
 
