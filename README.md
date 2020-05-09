@@ -1,6 +1,6 @@
 ## SqliteTest or TreeViewTest
 
-### Macで開発する
+#### Macで開発する
 
 [VisualStudioMacをインストールする](https://docs.microsoft.com/ja-jp/visualstudio/mac/installation?view=vsmac-2019)
 
